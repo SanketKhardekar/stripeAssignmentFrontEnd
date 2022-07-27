@@ -10,7 +10,8 @@ const NavbarComponent = () => {
         elevation={0}
         position="sticky"
         sx={{
-          backgroundColor: "transparent",
+          top:"2.5rem",
+          backgroundColor: "white",
           padding: 1,
           borderBottomWidth: 0.1,
           paddingBottom: 2,
@@ -27,7 +28,7 @@ const NavbarComponent = () => {
           >
             <img
               src={require("../assets/logo.png")}
-              style={{ marginRight: 20 }}
+              style={{ paddingRight: 20 }}
               alt="logo"
             />
             {navItems.map((item, index) => {
@@ -36,7 +37,7 @@ const NavbarComponent = () => {
                   marginLeft={3}
                   key={index}
                   color="black"
-                  variant="body2"
+                  fontSize="14px"
                   fontFamily="Poppins, sans-serif"
                   fontWeight="bold"
                   component="div"
@@ -49,13 +50,14 @@ const NavbarComponent = () => {
           <Box
             sx={{
               display: { md: "none", xs: "flex" },
+              paddingTop:1,
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
             }}
           >
             <img
-              style={{ height: 30 }}
+              style={{ height: 25 }}
               src={require("../assets/logo.png")}
               alt="logo"
             />
@@ -67,7 +69,8 @@ const NavbarComponent = () => {
           </Box>
         </Container>
       </AppBar>
-      <Container sx={{ backgroundColor: "transparent"}} maxWidth="lg">
+      <div style={{position:"sticky", top:"2.5rem" , zIndex:1200,backgroundColor: "white"}}>
+      <Container maxWidth="lg">
         <Box
           sx={{
             display: { md: "flex", xs: "none" },
@@ -80,10 +83,9 @@ const NavbarComponent = () => {
           }}
         >
           <Typography
-            sx={{ borderBottom: 1, borderBottomColor: "blue" }}
-            variant="body2"
-            color="#808080"
-            fontWeight="bolder"
+            sx={{ textDecorationLine:"underline", textDecorationColor:"blue", textUnderlineOffset:"0.3rem", fontWeight:600 }}
+            fontSize="14px"
+            color="#666666"
             fontFamily="Poppins, sans-serif"
             component="section"
           >
@@ -92,12 +94,13 @@ const NavbarComponent = () => {
           <ProductBuySection mobileView={false} />
         </Box>
       </Container>
+      </div>
       <hr style={{ borderTop:"5px" }}/>
       <AppBar
         position="fixed"
-        color="transparent"
         sx={{
           display: { md: "none", sm: "flex", xs: "flex" },
+          background:"white",
           top: "auto",
           bottom: 0,
         }}
