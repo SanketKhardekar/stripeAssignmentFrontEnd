@@ -2,7 +2,9 @@ import axios from "axios";
 import { product_image_url } from "../constants/constant.js";
 import { Typography, Button } from "@mui/material";
 import QuantityInputComponent from "./QuantityInputComponent.jsx";
+import { useSelector } from "react-redux";
 const ProductBuySection=(props)=>{
+    const quantity=useSelector(state => state.productQuantity.quantity);
     const { mobileView }=props;
     const checkoutClickhandler = async () => {
         try {
@@ -15,7 +17,7 @@ const ProductBuySection=(props)=>{
                 image: product_image_url,
                 desc: "This Is New Apple AirPods (3rd Generation )",
                 price: 299,
-                quantity: 2,
+                quantity: quantity,
               },
             ],
           });
@@ -36,14 +38,23 @@ const ProductBuySection=(props)=>{
               }}
             >
               <Typography
-                fontSize={13}
+                fontSize={{md:"14px", xs:"12px"}}
+                component="section"
+                fontWeight={400}
+                fontFamily="Poppins, sans-serif"
+                color="black"
+              >
+                Price
+              </Typography>
+              <Typography
+                fontSize={{md:"14px", xs:"12px"}}
                 component="section"
                 fontWeight="bold"
                 fontFamily="Poppins, sans-serif"
                 color="black"
-                sx={{ marginRight: 5 }}
+                sx={{ marginRight: 3, marginLeft:0.5 }}
               >
-                Price $299.00
+                 $299.00
               </Typography>
               <QuantityInputComponent />
               <Button
@@ -51,10 +62,10 @@ const ProductBuySection=(props)=>{
                 onClick={checkoutClickhandler}
                 sx={{
                   marginLeft: 2,
-                  backgroundColor: "#0156FF",
+                  background: "#0156FF",
                   textTransform: "capitalize",
                   padding: 1.5,
-                  borderRadius: 10,
+                  borderRadius:"50px",
                   width: 150,
                   fontWeight:"bold"
                 }}
