@@ -1,9 +1,16 @@
 import { Box, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { updateQuantity } from "../store/slices/QuantitySlice";
+import { useDispatch, useSelector } from "react-redux";
 const QuantityInputComponent = (props) => {
-  const [quantity, setQuantity] = useState(1);
+  const storeQuantity=useSelector(state => state.productQuantity.quantity);
+  const dispatch=useDispatch();
+  const [quantity, setQuantity] = useState(storeQuantity);
+  useEffect(()=>{
+    dispatch(updateQuantity(quantity))
+  },[dispatch,quantity])
   return (
     <Box
       sx={{
@@ -12,7 +19,7 @@ const QuantityInputComponent = (props) => {
         height: "10px",
         padding: 2,
         flexDirection: "row",
-        backgroundColor: "#f8f8ff",
+        backgroundColor: "#F5F7FF",
         justifyContent: "space-between",
         color: "black",
         alignItems: "center",
@@ -23,7 +30,7 @@ const QuantityInputComponent = (props) => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-start   ",
+          justifyContent: "flex-start",
           alignItems: "center",
         }}
       >
