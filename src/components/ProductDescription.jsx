@@ -5,7 +5,7 @@ import { product_description } from "../constants/constant";
 const ProductDescription = (props) => {
   return (
     <Fragment>
-      <Box sx={{ paddingY: { md: 12, xs: 10 } }}>
+      <Box sx={{ paddingY: { md: 12, xs: 2 }, paddingBottom:{ md:14, xs:10 } }}>
         <Typography
           sx={{
             display: { xs: "none", md: "flex" },
