@@ -5,7 +5,9 @@ import { product_description } from "../constants/constant";
 const ProductDescription = (props) => {
   return (
     <Fragment>
-      <Box sx={{ paddingY: { md: 12, xs: 2 }, paddingBottom:{ md:14, xs:10 } }}>
+      <Box
+        sx={{ paddingY: { md: 8, xs: 2 }, paddingBottom: { md: 14, xs: 10 } }}
+      >
         <Typography
           sx={{
             display: { xs: "none", md: "flex" },
@@ -39,8 +41,7 @@ const ProductDescription = (props) => {
         </Typography>
         <Typography
           align="left"
-          sx={{ fontWeight: 500 }}
-          fontSize={{ md: "32px", xs: "22px" }}
+          sx={{ fontWeight: 500, fontSize: { xs: "22px", md: "32px" } }}
           fontFamily="Poppins, sans-serif"
           component="section"
           gutterBottom
@@ -76,6 +77,7 @@ const ProductDescription = (props) => {
         </ul>
         <Typography
           align="left"
+          sx={{ paddingTop: "12px" }}
           fontSize="12px"
           fontFamily="Poppins, sans-serif"
           component="section"
