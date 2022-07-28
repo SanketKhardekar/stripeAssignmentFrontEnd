@@ -78,7 +78,7 @@ const NavbarComponent = () => {
             justifyContent: "space-between",
             alignItems: "center",
             paddingTop: 3,
-            paddingLeft: 11,
+            paddingLeft: 10,
             paddingBottom: 3,
           }}
         >
