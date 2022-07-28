@@ -10,6 +10,7 @@ const ProductBuySection=(props)=>{
         try {
           const response = await axios.post(`http://localhost:5000/api/payment/`, {
             userId: 51100111,
+            customername:"Ram",
             cartItems: [
               {
                 id: 3001,
