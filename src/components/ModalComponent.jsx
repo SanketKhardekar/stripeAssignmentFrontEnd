@@ -45,7 +45,7 @@ const ModalComponent = (props) => {
               sx={{
                 width: { md: "100px", xs: "60px" },
                 height: { md: "100px", xs: "60px" },
-                color: "#7DCE13",
+                color: "#5DCC1A",
               }}
             />
           ) : (

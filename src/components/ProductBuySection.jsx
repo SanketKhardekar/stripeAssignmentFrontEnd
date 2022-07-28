@@ -68,7 +68,10 @@ const ProductBuySection=(props)=>{
                   padding: 1.5,
                   borderRadius:"50px",
                   width: 150,
-                  fontWeight:"bold"
+                  "&:hover": {
+                    backgroundColor: "#0156ff",
+                  },
+                  fontWeight:"600"
                 }}
               >
                 Buy Now

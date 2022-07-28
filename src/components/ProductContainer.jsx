@@ -23,7 +23,7 @@ const ProductContainer = (props) => {
           sx={{
             backgroundColor: { xs: "white", md: "#F5F7FF" },
             paddingX: { md: 6, xs: 0 },
-            paddingLeft: { md: 10, xs: 0 },
+            paddingLeft: { md: 9, xs: 0 },
             position: "relative",
             ":before": {
               content: "''",
@@ -31,8 +31,8 @@ const ProductContainer = (props) => {
               bottom: 0,
               width: "9600px",
               position: "absolute",
-              background: "#F5F7FF",
-              right: { xs: "120%", md: "100%" },
+              background: { xs: "#ffffff", md: "#F5F7FF" },
+              right: "100%",
             },
           }}
         >

@@ -11,7 +11,7 @@ const ProductDescription = (props) => {
         <Typography
           sx={{
             display: { xs: "none", md: "flex" },
-            marginBottom: { xs: 0, md: 3 },
+            paddingBottom: { xs: 0, md: 3 },
           }}
           color="#A2A6B0"
           fontSize="12px"
@@ -41,7 +41,7 @@ const ProductDescription = (props) => {
         </Typography>
         <Typography
           align="left"
-          sx={{ fontWeight: 500, fontSize: { xs: "22px", md: "32px" } }}
+          sx={{ fontWeight: 500, fontSize: { xs: "22px", md: "30px" } }}
           fontFamily="Poppins, sans-serif"
           component="section"
           gutterBottom
@@ -52,7 +52,7 @@ const ProductDescription = (props) => {
           sx={{ display: { lg: "block", xs: "none" } }}
           align="left"
           fontSize="12px"
-          fontFamily="poppins, sans-serif"
+          fontFamily="Poppins"
           component="section"
           gutterBottom
         >
@@ -65,7 +65,7 @@ const ProductDescription = (props) => {
                 <Typography
                   align="left"
                   fontSize="12px"
-                  fontFamily="Poppins, sans-serif"
+                  sx={{ fontFamily:"Poppins, sans-serif" }}
                   component="section"
                   gutterBottom
                 >
