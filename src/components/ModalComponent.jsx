@@ -9,9 +9,10 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "70%",
-  maxWidth: 600,
-  bgcolor: "background.paper",
+  maxWidth: 400,
+  bgcolor: "#F5F5F5",
   p: 4,
+  outline: "none",
 };
 
 const ModalComponent = (props) => {
@@ -41,33 +42,39 @@ const ModalComponent = (props) => {
         >
           {type === "success" ? (
             <CheckCircleSharpIcon
-              sx={{ width: 120, height: 120, color: "#7DCE13" }}
+              sx={{
+                width: { md: "100px", xs: "60px" },
+                height: { md: "100px", xs: "60px" },
+                color: "#7DCE13",
+              }}
             />
           ) : (
             <CancelSharpIcon sx={{ width: 120, height: 120, color: "red" }} />
           )}
 
           <Typography
-            variant="h6"
+            sx={{
+              fontSize: { md: "24px", xs: "18px" },
+              fontWeight: 700,
+            }}
             marginY={3}
             component="div"
             fontFamily="Poppins, sans-serif"
-            fontWeight="bolder"
           >
             Purchase {type === "success" ? "Successful" : "Unsuccessful"}
           </Typography>
           {type === "success" ? (
             <Fragment>
               <Typography
-                variant="body1"
-                marginY={1}
+                sx={{ fontSize: { xs: "14px", md: "18px" }, fontWeight: 300 }}
+                marginY={2}
                 component="div"
                 fontFamily="Poppins, sans-serif"
               >
                 You will get your product soon!
               </Typography>
               <Typography
-                variant="body1"
+                sx={{ fontSize: { xs: "14px", md: "18px" }, fontWeight: 300 }}
                 align="center"
                 marginY={1}
                 component="div"
