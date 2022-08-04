@@ -8,7 +8,7 @@ const ProductBuySection=(props)=>{
     const { mobileView }=props;
     const checkoutClickhandler = async () => {
         try {
-          const response = await axios.post(`http://localhost:5000/api/payment/`, {
+          const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}payment/`, {
             userId: 51100111,
             customername:"Ram",
             cartItems: [
